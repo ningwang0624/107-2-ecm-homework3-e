@@ -132,12 +132,11 @@ $$
 </td></tr></table>
 
 3.2
-
 <table><tr><td bgcolor=#F5DEB3>
 \begin{align}
 &因為\alpha_{i}=\frac{\sum_{i=1}^T\epsilon_{it}}{T}, v_{it}=\epsilon_{it}-\alpha_{i}\\
-&故E(v_{it}\alpha_{i})=E[(\epsilon_{it}-\frac{\sum_{i=1}^T\epsilon_{it}}{T}})*{\frac{\sum_{i=1}^T\epsilon_{it}}{T}}]\\
-&=E(\epsilon_{it}-\bar{\epsilon}_i)*E(\bar{\epsilon}_i)\\
+&故E(v_{it}\alpha_{i})=E((\epsilon_{it}-\frac{\sum_{i=1}^T\epsilon_{it}}{T})(\frac{\sum_{i=1}^T\epsilon_{it}}{T})\\
+&=E(\epsilon_{it}-\bar{\epsilon}_i)E(\bar{\epsilon}_i)\\
 &因為前項為零，故整項為零
 \end{align}
 </td></tr></table>
@@ -162,7 +161,32 @@ $$
 3.5
 <table><tr><td bgcolor=#F5DEB3>
 \begin{align}
-
+&\mbox{因為}\\
+&{\epsilon} =
+\begin{pmatrix}
+{\epsilon}_1 \\{\epsilon}_2 \\ \vdots \\{\epsilon}_N
+\end{pmatrix}\\
+&\mbox{故}
+\Omega=E(\epsilon\epsilon^T)\\
+&=E\begin{pmatrix}
+\begin{bmatrix}
+{\epsilon}_1 \\{\epsilon}_2 \\ \vdots \\{\epsilon}_N
+\end{bmatrix}
+\begin{bmatrix}
+\epsilon_1,\epsilon_2,\dots,\epsilon_N
+\end{bmatrix}
+\end{pmatrix}
+=E\begin{bmatrix}
+E\epsilon^2_1&E(\epsilon_1\epsilon_2)&E(\epsilon_1\epsilon_3)&\dots&E(\epsilon_1\epsilon_N)\\
+E(\epsilon_2\epsilon_1)&E(\epsilon^2_2)\\
+\vdots&&\ddots\\
+\vdots&&&\ddots\\
+E(\epsilon_N\epsilon_1)&&&&E(\epsilon^2_N)
+\end{bmatrix}\\
+&\mbox{其中}\epsilon_i=
+\begin{pmatrix}
+{\epsilon}_{i1} \\{\epsilon}_{i2} \\ \vdots \\{\epsilon}_{iN}
+\end{pmatrix}
 \end{align}
 </td></tr></table>
 
