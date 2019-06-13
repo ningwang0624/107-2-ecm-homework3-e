@@ -34,6 +34,24 @@ D(w_{it}|\bar{w}_{i.},\bar{w}_{.t},\bar{\bar{w}})=w_{it}-\bar{w}_{i.}-\bar{w}_{.
 $$
 說明對廣義固定效果模型左右式一起進行$D(.)$函數的demean轉換可以去除$c_i$及$\delta_t$兩個固定效果。
 
+<table><tr><td bgcolor=#F5DEB3>
+\begin{align}
+&y_{it}=x_{it}'\beta+c_{i}+\delta_{t}+\epsilon_{it}\\
+\\
+&\bar{w}_{i,}=\frac{\sum_{i=1}^T w_{it}}{T}\\
+&\bar{w}_{t,}=\frac{\sum_{i=1}^N w_{it}}{N}\\
+&\bar{w}=\frac{\sum_i\sum_t w_{it}}{NT}\\
+\\
+&y_{it}-\bar{y}_i-\bar{y}_t+\bar{y}\\
+&=(x_{it}-\bar{x}_i-\bar{x}_t+\bar{x})'\beta+(c_i-c_i-i+i)+
+(\delta_{t}-\delta_{t}-\bar{\delta}+\bar{\delta})+
+(\epsilon_{it}-\epsilon_{i}-\epsilon_{t}+\bar{\epsilon})\\
+&=(y_{it}-\bar{y}_{i}-\bar{y}_{t}+\bar{y})\\
+&=(x_it-\bar{x}_{i}-\bar{x}_{t}+\bar{x})'\beta+
+(\epsilon_{it}-\bar{\epsilon}_{i}-\bar{\epsilon}_{t}+\bar{\epsilon})
+\end{align}
+</td></tr></table>
+
 ## 3 Panel data的迴歸殘差
 考慮迴歸模型：
 $$
